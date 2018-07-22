@@ -1,0 +1,38 @@
+{
+  "name": "polyr-github-io",
+  "version": "1.0.0",
+  "description": "My personal website.",
+  "homepage": "https://github.com/Polyr/polyr.github.io",
+  "bugs": {
+    "url": "https://github.com/Polyr/polyr.github.io/issues"
+  },
+  "license": "MIT",
+  "author": "Polyr",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Polyr/polyr.github.io.git"
+  },
+  "scripts": {
+    "clean:css": "rimraf dist/**/assets/**/css",
+    "clean:js": "rimraf dist/**/assets/**/js",
+    "clean": "rimraf dist",
+    "build:sass": "node build-scripts/build-sass.js",
+    "build:css": "node build-scripts/build-css.js",
+    "build:js": "node build-scripts/build-js.js",
+    "build:other": "node build-scripts/copy-files.js",
+    "build": "npm run build:sass && npm run build:css && npm run build:js && npm run build:other"
+  },
+  "private": true,
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "clean-css": "^4.1.9",
+    "glob": "^7.1.2",
+    "hoek": "^5.0.3",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.7.2",
+    "postcss": "^6.0.11",
+    "rimraf": "^2.6.2",
+    "uglify-es": "^3.3.9"
+  },
+  "dependencies": {}
+}
