@@ -152,3 +152,6 @@ $RECYCLE.BIN/
 
 
 # End of https://www.gitignore.io/api/windows,macos,linux,sass,node
+
+### Miscellaneous ###
+dist/
