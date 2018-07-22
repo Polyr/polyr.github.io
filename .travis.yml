@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - "lts/*"
+script:
+  - npm run clean
+  - npm run build
+cache:
+  directories:
+    - node_modules
+branches:
+  only:
+    - src
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: src
+  local_dir: dist
+  target_branch: master
