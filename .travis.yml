@@ -2,6 +2,12 @@ language: node_js
 node_js:
   - "lts/*"
 script:
+  - |
+    curl -X DELETE "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE/purge_cache" \
+         -H "X-Auth-Email: $CLOUDFLARE_EMAIL" \
+         -H "X-Auth-Key: $CLOUDFLARE_KEY" \
+         -H "Content-Type: application/json" \
+         --data '{"purge_everything":true}'
   - npm run clean
   - npm run build
 cache:
@@ -16,5 +22,5 @@ deploy:
   github_token: $GITHUB_TOKEN
   on:
     branch: src
-  local_dir: dist
+  local_dir: build
   target_branch: master
