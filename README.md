@@ -1,5 +1,5 @@
 # polyr.github.io
-My personal website, live at https://polyr.xyz/.
+My personal website, live at https://www.polyr.xyz/.
 
 ## License
 Unless otherwise noted, source code is licensed under the [MIT License](https://opensource.org/licenses/MIT) and site content is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
