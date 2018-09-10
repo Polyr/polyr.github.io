@@ -22,9 +22,9 @@
     "build:sass": "node lib/build/build-sass.js",
     "build:css": "node lib/build/build-css.js",
     "build:js": "node lib/build/build-js.js",
+    "build:misc": "node lib/build/copy-files.js",
     "build:mod-table": "node lib/build/build-mod-table.js",
-    "build:other": "node lib/build/copy-files.js",
-    "build": "npm run build:lib && npm run build:sass && npm run build:css && npm run build:js && npm run build:other"
+    "build": "npm run build:lib && npm run build:sass && npm run build:css && npm run build:js && npm run build:misc && npm run build:mod-table"
   },
   "private": true,
   "devDependencies": {

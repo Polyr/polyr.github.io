@@ -9,8 +9,7 @@ script:
          -H "Content-Type: application/json" \
          --data '{"purge_everything":true}'
   - npm run clean
-  - npm run build
-  - npm run build:mod-table -- $GITHUB_API_TOKEN
+  - npm run build -- $GITHUB_API_TOKEN
 cache:
   directories:
     - node_modules
