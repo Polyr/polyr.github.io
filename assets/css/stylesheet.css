@@ -1,0 +1,11 @@
+th.sorttable_sorted {
+    cursor: n-resize;
+}
+
+table.sortable th:not(.sorttable_nosort), th.sorttable_sorted_reverse {
+    cursor: s-resize;
+}
+
+#mods td {
+    white-space: pre-line;
+}

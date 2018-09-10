@@ -13,25 +13,35 @@
     "url": "git+https://github.com/Polyr/polyr.github.io.git"
   },
   "scripts": {
+    "clean:lib": "rimraf lib/build",
     "clean:css": "rimraf dist/**/assets/**/css",
     "clean:js": "rimraf dist/**/assets/**/js",
-    "clean": "rimraf dist",
-    "build:sass": "node build-scripts/build-sass.js",
-    "build:css": "node build-scripts/build-css.js",
-    "build:js": "node build-scripts/build-js.js",
-    "build:other": "node build-scripts/copy-files.js",
-    "build": "npm run build:sass && npm run build:css && npm run build:js && npm run build:other"
+    "clean:dist": "rimraf dist",
+    "clean": "npm run clean:lib && npm run clean:dist",
+    "build:lib": "babel lib/src -d lib/build",
+    "build:sass": "node lib/build/build-sass.js",
+    "build:css": "node lib/build/build-css.js",
+    "build:js": "node lib/build/build-js.js",
+    "build:mod-table": "node lib/build/build-mod-table.js",
+    "build:other": "node lib/build/copy-files.js",
+    "build": "npm run build:lib && npm run build:sass && npm run build:css && npm run build:js && npm run build:mod-table && npm run build:other"
   },
   "private": true,
   "devDependencies": {
     "autoprefixer": "^7.1.4",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
     "clean-css": "^4.1.9",
     "glob": "^7.1.2",
+    "graphql-request": "^1.8.2",
     "hoek": "^5.0.3",
+    "jsdom": "^12.0.0",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.7.2",
     "postcss": "^6.0.11",
     "rimraf": "^2.6.2",
+    "semver": "^5.5.1",
     "uglify-es": "^3.3.9"
   },
   "dependencies": {}
