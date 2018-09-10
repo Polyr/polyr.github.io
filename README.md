@@ -1,4 +1,4 @@
-# polyr.github.io
+# polyr.github.io [![Build Status](https://img.shields.io/travis/com/Polyr/polyr.github.io.svg)](https://travis-ci.com/Polyr/polyr.github.io)
 My personal website, live at https://www.polyr.xyz/.
 
 ## License
